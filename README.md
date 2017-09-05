@@ -24,8 +24,9 @@ Or install it yourself as:
 and invoke `note_error` with the path being visited:
 
 ```ruby
+...
 class PageObject
-  include Capybara::DSL
+  include Capybara::DSL # required
   ...
   include Capybara::Status::Error # include mixin
 
@@ -36,6 +37,7 @@ class PageObject
 
   ...
 end
+...
 ```
 
 ## Development

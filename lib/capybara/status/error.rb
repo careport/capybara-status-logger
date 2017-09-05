@@ -1,11 +1,8 @@
 require "capybara/status/error/version"
-require "capybara"
 
 module Capybara
   module Status
     module Error
-      include Capybara::DSL
-
       def note_error(path)
         return if status_code < 400
 
