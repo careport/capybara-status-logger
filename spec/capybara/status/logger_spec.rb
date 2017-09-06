@@ -7,11 +7,11 @@ class GenericPageObject
     print_error(path)
   end
 
-  def find(_)
+  def find(*)
     FakeElement.new
   end
 
-  def find_all(_)
+  def find_all(*)
     [FakeElement.new]
   end
 
