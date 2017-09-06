@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "capybara/status/error/version"
+require "capybara/status/logger/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "capybara-status-error"
-  spec.version       = Capybara::Status::Error::VERSION
+  spec.name          = "capybara-status-logger"
+  spec.version       = Capybara::Status::Logger::VERSION
   spec.authors       = ["Saad Rhoulam"]
   spec.email         = ["saad.rhoulam@careporthealth.com"]
 
   spec.summary       = %q{Print meaningful error messages to console when the visited page is served with a non-successful HTTP status code.}
   spec.description   = %q{A mixin for Capybara page objects that overrides `#visit` with a method that tests for successful HTTP status codes and throws a meaningful error message otherwise..}
-  spec.homepage      = "https://github.com/careport/capybara-status-error"
+  spec.homepage      = "https://github.com/careport/capybara-status-logger"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

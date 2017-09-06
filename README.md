@@ -1,4 +1,4 @@
-# Capybara::Status::Error
+# Capybara::Status::Logger
 
 Get a useful error message from Capybara when the server spits out an error page.
 
@@ -7,7 +7,7 @@ Get a useful error message from Capybara when the server spits out an error page
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'capybara-status-error'
+gem 'capybara-status-logger'
 ```
 
 And then execute:
@@ -16,23 +16,23 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install capybara-status-error
+    $ gem install capybara-status-logger
 
 ## Usage
 
-`include` the `Capybara::Status::Error` mixin in your Capybara wrapper class(es)
-and invoke `note_error` with the path being visited:
+`include` the `Capybara::Status::Logger` mixin in your Capybara wrapper class(es)
+and invoke `print_error` with the path being visited:
 
 ```ruby
 ...
 class PageObject
   include Capybara::DSL # required
   ...
-  include Capybara::Status::Error # include mixin
+  include Capybara::Status::Logger # include mixin
 
   def visit(path)
     super
-    note_error(path) # will check for errors and use `path` in the error message
+    print_error(path) # will check for errors and use `path` in the error message
   end
 
   ...
@@ -48,7 +48,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/careport/capybara-status-error.
+Bug reports and pull requests are welcome on GitHub at https://github.com/careport/capybara-status-logger.
 
 ## License
 

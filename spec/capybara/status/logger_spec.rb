@@ -1,10 +1,10 @@
 require "spec_helper"
 
 class GenericPageObject
-  include Capybara::Status::Error
+  include Capybara::Status::Logger
 
   def visit(path)
-    note_error(path)
+    print_error(path)
   end
 
   def find(_)
@@ -26,13 +26,13 @@ class GenericPageObject
   end
 end
 
-RSpec.describe Capybara::Status::Error do
+RSpec.describe Capybara::Status::Logger do
   it "has a version number" do
-    expect(Capybara::Status::Error::VERSION).not_to be nil
+    expect(Capybara::Status::Logger::VERSION).not_to be nil
   end
 
   it "reports useful error messages" do
-    url = "http://google.com/capybara-status-error"
+    url = "http://google.com/capybara-status-logger"
     expect { GenericPageObject.new.visit(url) }.to raise_error(Capybara::WindowError)
   end
 end
