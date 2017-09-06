@@ -1,7 +1,7 @@
 require "bundler/setup"
 require "capybara"
 require "capybara/rspec"
-require "capybara/status/error"
+require "capybara/status/logger"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

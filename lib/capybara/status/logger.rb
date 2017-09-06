@@ -1,9 +1,9 @@
-require "capybara/status/error/version"
+require "capybara/status/logger/version"
 
 module Capybara
   module Status
-    module Error
-      def note_error(path)
+    module Logger
+      def print_error(path)
         return if status_code < 400
 
         trace_elems = find_all('.trace-frames')

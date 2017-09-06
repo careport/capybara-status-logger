@@ -1,6 +1,6 @@
 module Capybara
   module Status
-    module Error
+    module Logger
       VERSION = "0.1.2"
     end
   end
