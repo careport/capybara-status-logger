@@ -40,6 +40,21 @@ end
 ...
 ```
 
+## Effect
+
+Produces error messages resembling this when running Capybara tests:
+
+```
+...
+     Capybara::WindowError:
+       Got status 500 visiting /admin/users?as=auth0%7C3
+
+       NameError in Admin::Users#index
+       Trace:
+       app/views/admin/bulk_actions/_bulk_actions.html.haml:19:in `_app_views_admin_bulk_actions__bulk_actions_html_haml___2210073073125870582_70105586184080'
+...
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
